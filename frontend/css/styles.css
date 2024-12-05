@@ -1,0 +1,109 @@
+:root {
+    --primary-color: rgb(255, 87, 34); /* Cor primária vibrante */
+    --primary-color-hover: rgb(255, 145, 0); /* Cor de hover mais clara */
+    --background-color: #f0f4f8; /* Fundo mais claro */
+    --white-color: #ffffff;
+    --text-color: #212121; /* Texto mais escuro para contraste */
+    --border-color: #ddd; /* Bordas mais suaves */
+    --shadow-color: rgba(0, 0, 0, 0.2); /* Sombra mais pronunciada */
+    --font-family: 'Roboto', sans-serif; /* Fonte moderna */
+}
+
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 30px; /* Aumenta o padding para um layout mais espaçoso */
+    background-color: var(--background-color);
+    line-height: 1.8; /* Melhora a legibilidade */
+}
+
+#app {
+    max-width: 700px; /* Aumenta a largura máxima */
+    margin: auto;
+    background: var(--white-color);
+    padding: 30px; /* Aumenta o padding */
+    border-radius: 12px; /* Raio de borda mais suave */
+    box-shadow: 0 8px 30px var(--shadow-color); /* Sombra mais pronunciada */
+}
+
+h1, h2 {
+    color: var(--text-color);
+    margin-bottom: 20px; /* Espaçamento inferior consistente */
+    font-weight: 600; /* Aumenta o peso da fonte */
+}
+
+input, textarea {
+    width: 100%;
+    margin: 15px 0;
+    padding: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 18px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: var(--primary-color);
+}
+
+button {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+button:hover {
+    background-color: var(--primary-color-hover);
+    transform: scale(1.05);
+}
+
+#event-form, #auth-form {
+    margin-bottom: 30px;
+}
+
+#event-list {
+    margin-top: 30px;
+}
+
+#events {
+    list-style-type: none;
+    padding: 0;
+}
+
+#events li {
+    background: #ffffff;
+    margin: 10px 0;
+    padding: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+#events li:hover {
+    background: #ffe0b2;
+    transform: translateY(-2px);
+}
+
+textarea {
+    resize: vertical;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 15px;
+    }
+
+    #app {
+        padding: 20px;
+    }
+
+    button {
+        width: 100%;
+    }
+}
